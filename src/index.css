@@ -1,41 +1,41 @@
+/* 
+
+TODO: Change all classes to ID where applicable 
+
+*/
+
 body {
   margin: 0;
 }
-
 .nav {
   background-color: #333;
-  color: white;
-  display: flex;
-  align-items: stretch;
-  padding: 1px;
-}
+  padding: 20px 10px;
 
-.navItemsContainer {
-  margin: 0;
-  list-style: none;
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 100%;
-}
-
-.navItemsContainer a.active {
-  background-color: #555;
 }
 
 .navItem {
-  color: inherit;
   text-decoration: none;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  font-size: medium;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  align-self: center;
+  padding: 10px;
   border-radius: 5px;
-  margin: 1px;
+  text-align: center;
 }
 
 .navItem:hover {
-  background-color: #777;
+  background-color: cadetblue;
+}
+
+.navItem.active {
+  background-color: royalblue;
+}
+
+.navHomeItem {
+  font-size: large;
 }
