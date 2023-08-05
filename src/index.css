@@ -7,6 +7,7 @@ TODO: Change all classes to ID where applicable
 body {
   margin: 0;
 }
+
 .nav {
   background-color: #333;
   padding: 20px 10px;
@@ -38,4 +39,37 @@ body {
 
 .navHomeItem {
   font-size: large;
+}
+
+.footer {
+  color: white;
+  background-color: #333;
+  padding: 20px 10px;
+}
+
+.page-title {
+  font-size: x-large;
+  margin: 0;
+  font-weight: bold;
+}
+
+.projects-page-root {
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.projects-container {
+  background-color: rgb(28, 92, 94);
+  padding: 1px;
+}
+
+.project-item {
+  background-color: rgba(86, 145, 147, 0.678);
+  color: goldenrod;
+}
+
+.project-item:hover {
+  background-color: rgb(86, 145, 147);
 }
