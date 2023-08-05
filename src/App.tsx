@@ -1,6 +1,11 @@
+import { ProjectsPage } from "./pages/projects/Projects_page";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/home/Home_page";
 import { Route, Routes } from "react-router-dom";
+import { AboutPage } from "./pages/about/About_page";
+import { ContactPage } from "./pages/contact/Contact_page";
+import { ExpierencePage } from "./pages/expierence/Expierence_page";
+import { SkillsPage } from "./pages/skills/Skills_page";
 
 function App() {
   return (
@@ -17,23 +22,6 @@ function App() {
       </Routes>
     </div>
   );
-}
-
-function AboutPage() {
-  return <h1>Welcome to the Aboutpage</h1>;
-}
-
-function ContactPage() {
-  return <h1>Welcome to the Contactpage</h1>;
-}
-function ExpierencePage() {
-  return <h1>Welcome to the Expierencepage</h1>;
-}
-function ProjectsPage() {
-  return <h1>Welcome to the Projectspage</h1>;
-}
-function SkillsPage() {
-  return <h1>Welcome to the Skillspage</h1>;
 }
 
 export default App;
