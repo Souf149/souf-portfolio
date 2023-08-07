@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .navItem {
@@ -24,6 +25,7 @@ body {
   font-size: medium;
   width: 100%;
   height: 100%;
+  max-width: 20%;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -62,12 +64,55 @@ body {
 
 .projects-container {
   background-color: rgb(28, 92, 94);
-  padding: 1px;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .project-item {
   background-color: rgba(86, 145, 147, 0.678);
   color: goldenrod;
+  padding: 2px;
+
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+}
+
+.project-item-image {
+  flex: 1;
+  height: 250px;
+  margin: 0 10px 0 0;
+}
+
+.project-item-info-container {
+  flex: 2;
+}
+
+.project-item-button-container {
+  display: flex;
+  justify-content: right;
+}
+
+.project-item-button {
+  background-color: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin: 1px;
+}
+
+.project-item-button:hover {
+  background-color: goldenrod;
+}
+
+.project-item-button:active {
+  background-color: red;
 }
 
 .project-item:hover {
