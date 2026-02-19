@@ -20,14 +20,14 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
     ContactSectionComponent,
   ],
   template: `
+    <app-site-header
+      [brand]="config.site.brand"
+      [experienceLabel]="config.site.navigation.experience"
+      [projectsLabel]="config.site.navigation.projects"
+      [skillsLabel]="config.site.navigation.skills"
+      [contactLabel]="config.site.navigation.contact"
+    />
     <main class="site">
-      <app-site-header
-        [brand]="config.site.brand"
-        [experienceLabel]="config.site.navigation.experience"
-        [projectsLabel]="config.site.navigation.projects"
-        [skillsLabel]="config.site.navigation.skills"
-        [contactLabel]="config.site.navigation.contact"
-      />
       <app-hero-section
         [eyebrow]="config.hero.eyebrow"
         [title]="config.hero.title"
