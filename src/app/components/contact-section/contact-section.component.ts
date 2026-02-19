@@ -7,4 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class ContactSectionComponent {
   @Input({required: true}) email = '';
+  @Input({required: true}) phone = '';
+  @Input({required: true}) linkedin = '';
+  @Input({required: true}) github = '';
 }

@@ -6,10 +6,32 @@
   color: var(--muted);
 }
 
-.contact-link {
-  display: inline-block;
-  margin-top: 0.85rem;
-  font-weight: 700;
+.contact-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.icon-link {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--accent);
   text-decoration: none;
+}
+
+.icon-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.icon-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

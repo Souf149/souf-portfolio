@@ -1,5 +1,37 @@
 <section id="contact" class="section contact">
   <h2>Contact</h2>
   <p>If you are hiring or want to collaborate, reach out.</p>
-  <a class="contact-link" [href]="'mailto:' + email">{{ email }}</a>
+  <div class="contact-icons">
+    <a class="icon-link" [href]="'mailto:' + email" aria-label="Email" title="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.2-.25L12 11.6l6.8-5.1H5.2ZM19 8.05l-6.4 4.8a1 1 0 0 1-1.2 0L5 8.05v9.2c0 .41.34.75.75.75h12.5c.41 0 .75-.34.75-.75v-9.2Z"
+        />
+      </svg>
+    </a>
+
+    <a class="icon-link" [href]="'tel:' + phone" aria-label="Phone" title="Phone">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M6.5 3A2.5 2.5 0 0 0 4 5.5C4 14.06 9.94 20 18.5 20a2.5 2.5 0 0 0 2.5-2.5v-2.16a1.5 1.5 0 0 0-1.13-1.46l-3.03-.76a1.5 1.5 0 0 0-1.52.5l-.66.88a12.07 12.07 0 0 1-5.16-5.16l.88-.66a1.5 1.5 0 0 0 .5-1.52l-.76-3.03A1.5 1.5 0 0 0 8.66 3H6.5Zm-.5 2.5c0-.28.22-.5.5-.5h2.16l.72 2.88-1.45 1.08a1.5 1.5 0 0 0-.44 1.89 14.07 14.07 0 0 0 5.66 5.66 1.5 1.5 0 0 0 1.89-.44l1.08-1.45 2.88.72v2.16c0 .28-.22.5-.5.5C11.05 18 6 12.95 6 5.5Z"
+        />
+      </svg>
+    </a>
+
+    <a class="icon-link" [href]="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12ZM5.5 10h2.88v8.5H5.5V10Zm4.56 0H12.8v1.16h.04c.38-.72 1.3-1.48 2.68-1.48 2.86 0 3.38 1.88 3.38 4.32v4.5H16v-3.99c0-.95-.02-2.18-1.33-2.18-1.33 0-1.54 1.04-1.54 2.11v4.06h-3.07V10Z"
+        />
+      </svg>
+    </a>
+
+    <a class="icon-link" [href]="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.21.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.32 1.08 2.88.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.71-.1-.25-.45-1.28.1-2.67 0 0 .85-.27 2.78 1.03a9.62 9.62 0 0 1 5.06 0c1.93-1.3 2.78-1.03 2.78-1.03.55 1.39.2 2.42.1 2.67.64.71 1.03 1.61 1.03 2.71 0 3.85-2.35 4.7-4.58 4.95.36.3.68.9.68 1.82v2.69c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+        />
+      </svg>
+    </a>
+  </div>
 </section>

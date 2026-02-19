@@ -28,7 +28,12 @@ import {WORK_EXPERIENCE} from './data/work-experience';
       <app-experience-section [items]="workExperience" />
       <app-projects-section [projects]="projects" />
       <app-skills-section [skills]="skills" />
-      <app-contact-section [email]="email" />
+      <app-contact-section
+        [email]="email"
+        [phone]="phone"
+        [linkedin]="linkedin"
+        [github]="github"
+      />
     </main>
   `,
   styleUrl: './app.css',
@@ -49,4 +54,7 @@ export class App {
   ];
 
   readonly email = 'hello@souf.dev';
+  readonly phone = '+1-555-123-4567';
+  readonly linkedin = 'https://www.linkedin.com/in/your-linkedin/';
+  readonly github = 'https://github.com/your-github-username';
 }
