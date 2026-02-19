@@ -1,8 +1,32 @@
 <section id="skills" class="section">
   <h2>{{ title }}</h2>
-  <ul class="skills">
+  @if (useTwoLines) {
+    <div class="skills-marquee">
+      <ul class="skills-track">
+        @for (skill of firstLineSkills; track $index; let i = $index) {
+          <li [attr.aria-hidden]="i >= firstLineBaseSkills.length ? 'true' : null">{{ skill }}</li>
+        }
+      </ul>
+    </div>
+    <div class="skills-marquee">
+      <ul class="skills-track reverse">
+        @for (skill of secondLineSkills; track $index; let i = $index) {
+          <li [attr.aria-hidden]="i >= secondLineBaseSkills.length ? 'true' : null">{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  } @else {
+    <div class="skills-marquee">
+      <ul class="skills-track">
+        @for (skill of firstLineSkills; track $index; let i = $index) {
+          <li [attr.aria-hidden]="i >= firstLineBaseSkills.length ? 'true' : null">{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+  <div class="sr-only" aria-live="polite">
     @for (skill of skills; track skill) {
-      <li>{{ skill }}</li>
+      <span>{{ skill }}</span>
     }
-  </ul>
+  </div>
 </section>

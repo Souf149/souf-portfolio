@@ -46,7 +46,7 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
         [description]="config.projects.description"
         [projects]="config.projects.items"
       />
-      <app-skills-section [title]="config.skills.title" [skills]="config.skills.items" />
+      <app-skills-section [title]="config.skills.title" [skills]="mergedSkills" />
       <app-contact-section
         [title]="config.contact.title"
         [description]="config.contact.description"
@@ -54,6 +54,7 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
         [phone]="config.contact.phone"
         [linkedin]="config.contact.linkedin"
         [github]="config.contact.github"
+        [website]="config.contact.website"
       />
     </main>
   `,
@@ -61,4 +62,11 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
 })
 export class App {
   readonly config = PORTFOLIO_CONFIG;
+
+  readonly mergedSkills = [
+    ...new Set([
+      ...this.config.skills.items,
+      ...this.config.projects.items.flatMap((project) => project.tags ?? []),
+    ]),
+  ];
 }

@@ -12,4 +12,5 @@ export class ContactSectionComponent {
   @Input({required: true}) phone = '';
   @Input({required: true}) linkedin = '';
   @Input({required: true}) github = '';
+  @Input({required: true}) website = '';
 }

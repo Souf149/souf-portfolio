@@ -43,5 +43,6 @@ export interface PortfolioConfig {
     phone: string;
     linkedin: string;
     github: string;
+    website: string;
   };
 }

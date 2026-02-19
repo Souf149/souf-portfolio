@@ -1,5 +1,6 @@
 .section {
   padding: 4rem 0;
+  text-align: center;
 }
 
 .contact p {
@@ -8,6 +9,7 @@
 
 .contact-icons {
   display: flex;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: 1rem;
 }

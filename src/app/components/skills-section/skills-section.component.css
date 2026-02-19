@@ -1,18 +1,62 @@
 .section {
   padding: 4rem 0;
+  text-align: center;
 }
 
-.skills {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+.skills-marquee {
   margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-left: 0;
+  border-right: 0;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  padding: 0.8rem 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
-.skills li {
+.skills-track {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 0.65rem;
+  width: max-content;
+  padding: 0 0.8rem;
+  --loop-count: 8;
+  animation: skills-scroll 36s linear infinite;
+}
+
+.skills-track.reverse {
+  animation-direction: reverse;
+}
+
+.skills-track li {
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
+  text-align: center;
+  white-space: nowrap;
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / var(--loop-count)));
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

@@ -96,5 +96,6 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     phone: '+1-555-123-4567',
     linkedin: 'https://www.linkedin.com/in/your-linkedin/',
     github: 'https://github.com/your-github-username',
+    website: 'https://your-website.com',
   },
 };
