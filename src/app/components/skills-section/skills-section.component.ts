@@ -6,5 +6,6 @@ import {Component, Input} from '@angular/core';
   styleUrl: './skills-section.component.css',
 })
 export class SkillsSectionComponent {
+  @Input({required: true}) title = '';
   @Input({required: true}) skills: string[] = [];
 }

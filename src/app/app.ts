@@ -6,8 +6,7 @@ import {HeroSectionComponent} from './components/hero-section/hero-section.compo
 import {ProjectsSectionComponent} from './components/projects-section/projects-section.component';
 import {SiteHeaderComponent} from './components/site-header/site-header.component';
 import {SkillsSectionComponent} from './components/skills-section/skills-section.component';
-import {PROJECTS} from './data/projects';
-import {WORK_EXPERIENCE} from './data/work-experience';
+import {PORTFOLIO_CONFIG} from './config/portfolio.config';
 
 @Component({
   selector: 'app-root',
@@ -22,39 +21,44 @@ import {WORK_EXPERIENCE} from './data/work-experience';
   ],
   template: `
     <main class="site">
-      <app-site-header />
-      <app-hero-section />
-      <app-about-section />
-      <app-experience-section [items]="workExperience" />
-      <app-projects-section [projects]="projects" />
-      <app-skills-section [skills]="skills" />
+      <app-site-header
+        [brand]="config.site.brand"
+        [experienceLabel]="config.site.navigation.experience"
+        [projectsLabel]="config.site.navigation.projects"
+        [skillsLabel]="config.site.navigation.skills"
+        [contactLabel]="config.site.navigation.contact"
+      />
+      <app-hero-section
+        [eyebrow]="config.hero.eyebrow"
+        [title]="config.hero.title"
+        [description]="config.hero.description"
+        [primaryCtaText]="config.hero.primaryCtaText"
+        [secondaryCtaText]="config.hero.secondaryCtaText"
+      />
+      <app-about-section [title]="config.about.title" [description]="config.about.description" />
+      <app-experience-section
+        [title]="config.experience.title"
+        [description]="config.experience.description"
+        [items]="config.experience.items"
+      />
+      <app-projects-section
+        [title]="config.projects.title"
+        [description]="config.projects.description"
+        [projects]="config.projects.items"
+      />
+      <app-skills-section [title]="config.skills.title" [skills]="config.skills.items" />
       <app-contact-section
-        [email]="email"
-        [phone]="phone"
-        [linkedin]="linkedin"
-        [github]="github"
+        [title]="config.contact.title"
+        [description]="config.contact.description"
+        [email]="config.contact.email"
+        [phone]="config.contact.phone"
+        [linkedin]="config.contact.linkedin"
+        [github]="config.contact.github"
       />
     </main>
   `,
   styleUrl: './app.css',
 })
 export class App {
-  readonly projects = PROJECTS;
-  readonly workExperience = WORK_EXPERIENCE;
-
-  readonly skills: string[] = [
-    'TypeScript',
-    'Angular',
-    'Node.js',
-    'REST APIs',
-    'SQL',
-    'Git',
-    'Testing',
-    'UI/UX Collaboration',
-  ];
-
-  readonly email = 'hello@souf.dev';
-  readonly phone = '+1-555-123-4567';
-  readonly linkedin = 'https://www.linkedin.com/in/your-linkedin/';
-  readonly github = 'https://github.com/your-github-username';
+  readonly config = PORTFOLIO_CONFIG;
 }

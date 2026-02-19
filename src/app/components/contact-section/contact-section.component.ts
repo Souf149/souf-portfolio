@@ -6,6 +6,8 @@ import {Component, Input} from '@angular/core';
   styleUrl: './contact-section.component.css',
 })
 export class ContactSectionComponent {
+  @Input({required: true}) title = '';
+  @Input({required: true}) description = '';
   @Input({required: true}) email = '';
   @Input({required: true}) phone = '';
   @Input({required: true}) linkedin = '';

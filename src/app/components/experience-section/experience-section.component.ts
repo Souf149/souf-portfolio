@@ -7,5 +7,7 @@ import {WorkExperience} from '../../models/work-experience';
   styleUrl: './experience-section.component.css',
 })
 export class ExperienceSectionComponent {
+  @Input({required: true}) title = '';
+  @Input({required: true}) description = '';
   @Input({required: true}) items: WorkExperience[] = [];
 }

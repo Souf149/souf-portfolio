@@ -1,8 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-about-section',
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.css',
 })
-export class AboutSectionComponent {}
+export class AboutSectionComponent {
+  @Input({required: true}) title = '';
+  @Input({required: true}) description = '';
+}

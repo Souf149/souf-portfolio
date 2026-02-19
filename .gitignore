@@ -62,3 +62,6 @@ baseline.json
 .env.*
 !.env.example
 
+# Local portfolio config (keep personal data out of git)
+src/app/config/portfolio.config.ts
+

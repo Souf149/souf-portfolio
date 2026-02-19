@@ -7,5 +7,7 @@ import {Project} from '../../models/project';
   styleUrl: './projects-section.component.css',
 })
 export class ProjectsSectionComponent {
+  @Input({required: true}) title = '';
+  @Input({required: true}) description = '';
   @Input({required: true}) projects: Project[] = [];
 }

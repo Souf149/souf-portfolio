@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "setup:config": "node -e \"const fs=require('fs');const src='src/app/config/portfolio.config.example.ts';const dst='src/app/config/portfolio.config.ts';if(!fs.existsSync(dst))fs.copyFileSync(src,dst);\"",
+    "prestart": "npm run setup:config",
+    "prebuild": "npm run setup:config",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
