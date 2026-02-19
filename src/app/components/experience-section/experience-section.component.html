@@ -1,0 +1,24 @@
+<section id="experience" class="section">
+  <div class="section-head">
+    <h2>Work Experience</h2>
+    <p>Roles where I delivered measurable product impact.</p>
+  </div>
+
+  <div class="timeline">
+    @for (item of items; track item.role + item.company) {
+      <article class="experience-card">
+        <div class="experience-header">
+          <h3>{{ item.role }}</h3>
+          <p class="company">{{ item.company }}</p>
+        </div>
+        <p class="meta">{{ item.period }} | {{ item.location }}</p>
+        <p class="summary">{{ item.summary }}</p>
+        <ul class="highlights">
+          @for (highlight of item.highlights; track highlight) {
+            <li>{{ highlight }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>

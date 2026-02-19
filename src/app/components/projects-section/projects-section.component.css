@@ -22,6 +22,7 @@
   background: var(--surface);
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .card img {
@@ -51,7 +52,7 @@
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: var(--bg);
+  background: var(--surface-2);
   font-size: 0.8rem;
 }
 
@@ -65,6 +66,10 @@
   color: var(--accent);
   font-weight: 700;
   text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {
