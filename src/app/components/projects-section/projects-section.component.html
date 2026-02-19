@@ -1,10 +1,15 @@
-<section id="projects" class="section">
+<section [id]="sectionId" class="section">
   <div class="section-head">
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
   </div>
 
-  <div class="project-grid">
+  <div
+    class="project-grid"
+    [class.collapsible]="enableCollapse"
+    [class.collapsed]="enableCollapse && !isExpanded"
+    [class.expanded]="enableCollapse && isExpanded"
+  >
     @for (project of projects; track project.title) {
       <article class="card">
         <img [src]="project.image_url" [alt]="project.title + ' preview image'" loading="lazy" />
@@ -30,4 +35,12 @@
       </article>
     }
   </div>
+
+  @if (enableCollapse && projects.length > 0) {
+    <div class="project-actions">
+      <button type="button" class="read-more" (click)="toggleExpanded()">
+        {{ isExpanded ? 'Show less' : 'Read more' }}
+      </button>
+    </div>
+  }
 </section>

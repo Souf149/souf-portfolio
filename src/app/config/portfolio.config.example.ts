@@ -64,6 +64,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
         github_link: 'https://github.com/your-username/project-one',
         live_link: 'https://your-project-one-url.com',
         tags: ['Angular', 'TypeScript', 'Firebase'],
+        featured: true,
       },
       {
         title: 'Project Two',
@@ -73,6 +74,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
         github_link: 'https://github.com/your-username/project-two',
         live_link: 'https://your-project-two-url.com',
         tags: ['Angular', 'Node.js', 'PostgreSQL'],
+        featured: true,
       },
       {
         title: 'Project Three',

@@ -17,6 +17,38 @@
   gap: 1rem;
 }
 
+.project-grid.collapsible {
+  position: relative;
+  overflow: hidden;
+  max-height: 2600px;
+  transition: max-height 0.45s ease-in-out;
+}
+
+.project-grid.collapsible.collapsed {
+  max-height: clamp(480px, 52vw, 620px);
+}
+
+.project-grid.collapsible.expanded {
+  max-height: 2600px;
+}
+
+.project-grid.collapsible.collapsed::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6rem;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.project-grid.collapsible.expanded::after {
+  opacity: 0;
+}
+
 .card {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -70,6 +102,23 @@
 
 .project-links a:hover {
   text-decoration: underline;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.read-more {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

@@ -42,9 +42,17 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
         [items]="config.experience.items"
       />
       <app-projects-section
+        [sectionId]="'projects'"
         [title]="config.projects.title"
         [description]="config.projects.description"
-        [projects]="config.projects.items"
+        [projects]="featuredProjects"
+      />
+      <app-projects-section
+        [sectionId]="'other-projects'"
+        [title]="'Other Projects'"
+        [description]="'Additional projects that showcase my range and experimentation.'"
+        [projects]="otherProjects"
+        [enableCollapse]="true"
       />
       <app-skills-section [title]="config.skills.title" [skills]="mergedSkills" />
       <app-contact-section
@@ -62,6 +70,13 @@ import {PORTFOLIO_CONFIG} from './config/portfolio.config';
 })
 export class App {
   readonly config = PORTFOLIO_CONFIG;
+  private readonly hasExplicitFeatured = this.config.projects.items.some((project) => project.featured);
+  readonly featuredProjects = this.hasExplicitFeatured
+    ? this.config.projects.items.filter((project) => project.featured)
+    : this.config.projects.items.slice(0, 4);
+  readonly otherProjects = this.hasExplicitFeatured
+    ? this.config.projects.items.filter((project) => !project.featured)
+    : this.config.projects.items.slice(4);
 
   readonly mergedSkills = [
     ...new Set([

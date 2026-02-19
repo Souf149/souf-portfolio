@@ -5,4 +5,5 @@ export interface Project {
   github_link: string;
   live_link?: string;
   tags?: string[];
+  featured?: boolean;
 }
