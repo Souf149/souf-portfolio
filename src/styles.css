@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f6f4ee;
+  --surface: #fffdf8;
+  --text: #1d1f1e;
+  --muted: #4f5754;
+  --line: #d8d1c5;
+  --accent: #226251;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 98, 81, 0.13), transparent 32%),
+    radial-gradient(circle at 90% 30%, rgba(168, 111, 55, 0.11), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}

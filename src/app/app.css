@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.site {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .site {
+    padding: 1rem;
+  }
+}
